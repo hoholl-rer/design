@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Шапка -->
+  <header class="bg-white shadow-md p-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">Design Studio</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-indigo-500">Обо мне</a>
+        <a href="#portfolio" class="hover:text-indigo-500">Портфолио</a>
+        <a href="#contact" class="hover:text-indigo-500">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Обо мне -->
+  <section id="about" class="max-w-6xl mx-auto py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Привет! 👋</h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Я занимаюсь графическим и веб-дизайном, создаю современные интерфейсы, фирменные стили и стильные визуальные проекты.
+    </p>
+  </section>
+
+  <!-- Портфолио -->
+  <section id="portfolio" class="bg-gray-100 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">Мои работы</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/400x250" alt="Проект 1" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-xl mb-2">Проект 1</h3>
+            <p class="text-gray-600 text-sm">Описание дизайна.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/400x250" alt="Проект 2" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-xl mb-2">Проект 2</h3>
+            <p class="text-gray-600 text-sm">Описание дизайна.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/400x250" alt="Проект 3" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-xl mb-2">Проект 3</h3>
+            <p class="text-gray-600 text-sm">Описание дизайна.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="max-w-6xl mx-auto py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Связаться со мной</h2>
+    <p class="text-lg text-gray-600 mb-4">Напишите мне на email: <span class="text-indigo-600 font-semibold">design@example.com</span></p>
+    <a href="mailto:design@example.com" class="bg-indigo-600 text-white px-6 py-3 rounded-xl shadow hover:bg-indigo-700 transition">Отправить письмо</a>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="bg-white text-center p-6 mt-10 border-t">
+    <p class="text-gray-500">© 2025 Design Studio. Все права защищены.</p>
+  </footer>
+</body>
+</html>
