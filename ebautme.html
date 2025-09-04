@@ -2,109 +2,92 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design Portfolio</title>
+  <title>Обо мне | Design Studio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background: radial-gradient(circle at top left, #1a1f1c, #0d0f0e);
-    }
-    .card {
-      background: #1e2420;
-      border-radius: 1.5rem;
-      box-shadow: 8px 8px 16px rgba(0,0,0,0.6), -8px -8px 16px rgba(50,60,50,0.2);
-    }
-    .btn {
-      background: #1e2420;
-      color: #e5e7eb;
-      border-radius: 1rem;
-      padding: 0.75rem 1.5rem;
-      font-weight: 600;
-      box-shadow: 6px 6px 12px rgba(0,0,0,0.6), -6px -6px 12px rgba(50,60,50,0.2);
-      transition: all 0.2s ease;
-    }
-    .btn:hover {
       background: #0f1512;
-      color: #10b981; /* тёмно-зеленый акцент */
+      color: #e5e7eb;
+      font-family: 'Inter', sans-serif;
     }
     h1, h2, h3, a {
       color: #10b981;
     }
+    .btn {
+      background: #10b981;
+      color: #0f1512;
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #059669;
+      transform: scale(1.05);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+    .fade-in-delay {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+      animation-delay: 0.5s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
-<body class="text-gray-200 font-sans">
+<body class="text-gray-200">
+
   <!-- Шапка -->
-  <header class="p-6">
+  <header class="p-6 fade-in">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">Design Studio</h1>
       <nav class="space-x-6">
-        <a href="index.html#about" class="hover:text-gray-400">Обо мне</a>
-        <a href="portfolio.html" class="hover:text-gray-400 font-semibold">Портфолио</a>
+        <a href="index.html" class="hover:text-gray-400">Главная</a>
+        <a href="portfolio.html" class="hover:text-gray-400">Портфолио</a>
+        <a href="about.html" class="font-semibold">Обо мне</a>
         <a href="index.html#contact" class="hover:text-gray-400">Контакты</a>
       </nav>
     </div>
   </header>
 
-  <!-- Контент страницы Портфолио -->
-  <section class="max-w-6xl mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">Мои работы</h2>
-    <p class="text-lg text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-      Здесь собраны лучшие проекты в сфере веб-дизайна, графики и брендирования.
+  <!-- Контент -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-4xl font-bold mb-6 fade-in">Обо мне</h2>
+    <p class="text-lg text-gray-400 leading-relaxed mb-8 fade-in-delay">
+      Привет! 👋 Я занимаюсь дизайном, создаю стильные и удобные интерфейсы, 
+      работаю с графикой и брендингом. Моей целью является создание проектов, 
+      которые сочетают в себе эстетику и функциональность.
     </p>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="card overflow-hidden">
-        <img src="https://via.placeholder.com/500x300" alt="Проект 1" class="w-full rounded-t-2xl">
-        <div class="p-5">
-          <h3 class="font-semibold text-xl mb-2">Проект 1</h3>
-          <p class="text-gray-400 text-sm">Редизайн сайта для стартапа.</p>
-        </div>
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <!-- Фото или иллюстрация -->
+      <div class="fade-in">
+        <img src="https://via.placeholder.com/500x400" alt="Моё фото" class="rounded-2xl shadow-lg">
       </div>
-      <div class="card overflow-hidden">
-        <img src="https://via.placeholder.com/500x300" alt="Проект 2" class="w-full rounded-t-2xl">
-        <div class="p-5">
-          <h3 class="font-semibold text-xl mb-2">Проект 2</h3>
-          <p class="text-gray-400 text-sm">Создание фирменного стиля для компании.</p>
-        </div>
+      
+      <!-- Навыки -->
+      <div class="space-y-4 fade-in-delay">
+        <h3 class="text-2xl font-semibold">Навыки</h3>
+        <ul class="list-disc list-inside text-gray-400 space-y-2">
+          <li>Графический дизайн</li>
+          <li>Веб-дизайн (UI/UX)</li>
+          <li>Брендинг и айдентика</li>
+          <li>Работа с Photoshop, Figma</li>
+        </ul>
+        <a href="portfolio.html" class="btn mt-4">Смотреть работы</a>
       </div>
-      <div class="card overflow-hidden">
-        <img src="https://via.placeholder.com/500x300" alt="Проект 3" class="w-full rounded-t-2xl">
-        <div class="p-5">
-          <h3 class="font-semibold text-xl mb-2">Проект 3</h3>
-          <p class="text-gray-400 text-sm">UX/UI-дизайн мобильного приложения.</p>
-        </div>
-      </div>
-      <div class="card overflow-hidden">
-        <img src="https://via.placeholder.com/500x300" alt="Проект 4" class="w-full rounded-t-2xl">
-        <div class="p-5">
-          <h3 class="font-semibold text-xl mb-2">Проект 4</h3>
-          <p class="text-gray-400 text-sm">Анимации и графический дизайн.</p>
-        </div>
-      </div>
-      <div class="card overflow-hidden">
-        <img src="https://via.placeholder.com/500x300" alt="Проект 5" class="w-full rounded-t-2xl">
-        <div class="p-5">
-          <h3 class="font-semibold text-xl mb-2">Проект 5</h3>
-          <p class="text-gray-400 text-sm">Редизайн интернет-магазина.</p>
-        </div>
-      </div>
-      <div class="card overflow-hidden">
-        <img src="https://via.placeholder.com/500x300" alt="Проект 6" class="w-full rounded-t-2xl">
-        <div class="p-5">
-          <h3 class="font-semibold text-xl mb-2">Проект 6</h3>
-          <p class="text-gray-400 text-sm">Иллюстрации для бренда одежды.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-12">
-      <a href="index.html" class="btn">Назад на главную</a>
     </div>
   </section>
 
-  <!-- Подвал -->
-  <footer class="text-center p-6 mt-10 border-t border-gray-700">
-    <p class="text-gray-500">© 2025 Design Studio. Все права защищены.</p>
-  </footer>
 </body>
 </html>

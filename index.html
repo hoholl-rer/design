@@ -7,13 +7,44 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background: radial-gradient(circle at top left, #1a1f1c, #0d0f0e);
+      background: #0d0f0e;
+      position: relative;
+      overflow-x: hidden;
     }
+    /* Градиентные пятна */
+    body::before,
+    body::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.35;
+      z-index: -1;
+    }
+    body::before {
+      width: 500px;
+      height: 500px;
+      top: -100px;
+      left: -150px;
+      background: radial-gradient(circle, #10b981, transparent 70%);
+    }
+    body::after {
+      width: 600px;
+      height: 600px;
+      bottom: -200px;
+      right: -200px;
+      background: radial-gradient(circle, #065f46, transparent 70%);
+    }
+
     .card {
       background: #1e2420;
       border-radius: 1.5rem;
       box-shadow: 8px 8px 16px rgba(0,0,0,0.6), -8px -8px 16px rgba(50,60,50,0.2);
+      opacity: 0;
+      transform: translateY(30px) scale(0.98);
+      animation: fadeInUp 0.8s ease forwards;
     }
+
     .btn {
       background: #1e2420;
       color: #e5e7eb;
@@ -22,24 +53,53 @@
       font-weight: 600;
       box-shadow: 6px 6px 12px rgba(0,0,0,0.6), -6px -6px 12px rgba(50,60,50,0.2);
       transition: all 0.2s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.3s;
     }
+
     .btn:hover {
       background: #0f1512;
       color: #10b981; /* тёмно-зелёный акцент */
     }
+
     h1, h2, h3, a {
       color: #10b981;
+    }
+
+    /* Анимации */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Задержки */
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
     }
   </style>
 </head>
 <body class="text-gray-200 font-sans">
   <!-- Шапка -->
-  <header class="p-6">
+  <header class="p-6 fade-in">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Design Studio</h1>
-      <nav class="space-x-6">
+      <h1 class="text-2xl font-bold fade-in" style="animation-delay:0.2s">Design Studio</h1>
+      <nav class="space-x-6 fade-in" style="animation-delay:0.4s">
         <a href="#about" class="hover:text-gray-400">Обо мне</a>
-        <a href="ebautme.html" class="hover:text-gray-400 font-semibold">Портфолио</a>
+        <a href="portfolio.html" class="hover:text-gray-400 font-semibold">Портфолио</a>
         <a href="#contact" class="hover:text-gray-400">Контакты</a>
       </nav>
     </div>
@@ -48,8 +108,8 @@
   <!-- Обо мне -->
   <section id="about" class="max-w-6xl mx-auto py-20 px-6 text-center">
     <div class="card p-10">
-      <h2 class="text-3xl font-bold mb-4">Привет! 👋</h2>
-      <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 fade-in" style="animation-delay:0.2s">Привет! 👋</h2>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto fade-in" style="animation-delay:0.4s">
         Я занимаюсь графическим и веб-дизайном, создаю современные интерфейсы, фирменные стили и стильные визуальные проекты.
       </p>
     </div>
@@ -58,27 +118,27 @@
   <!-- Портфолио (превью) -->
   <section class="py-20 px-6">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-10">Мои работы</h2>
+      <h2 class="text-3xl font-bold text-center mb-10 fade-in">Мои работы</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="card overflow-hidden">
+        <div class="card overflow-hidden delay-1">
           <img src="https://via.placeholder.com/400x250" alt="Проект 1" class="w-full rounded-t-2xl">
           <div class="p-4">
-            <h3 class="font-semibold text-xl mb-2">Проект 1</h3>
-            <p class="text-gray-400 text-sm">Описание дизайна.</p>
+            <h3 class="font-semibold text-xl mb-2 fade-in" style="animation-delay:0.3s">Проект 1</h3>
+            <p class="text-gray-400 text-sm fade-in" style="animation-delay:0.5s">Описание дизайна.</p>
           </div>
         </div>
-        <div class="card overflow-hidden">
+        <div class="card overflow-hidden delay-2">
           <img src="https://via.placeholder.com/400x250" alt="Проект 2" class="w-full rounded-t-2xl">
           <div class="p-4">
-            <h3 class="font-semibold text-xl mb-2">Проект 2</h3>
-            <p class="text-gray-400 text-sm">Описание дизайна.</p>
+            <h3 class="font-semibold text-xl mb-2 fade-in" style="animation-delay:0.3s">Проект 2</h3>
+            <p class="text-gray-400 text-sm fade-in" style="animation-delay:0.5s">Описание дизайна.</p>
           </div>
         </div>
-        <div class="card overflow-hidden">
+        <div class="card overflow-hidden delay-3">
           <img src="https://via.placeholder.com/400x250" alt="Проект 3" class="w-full rounded-t-2xl">
           <div class="p-4">
-            <h3 class="font-semibold text-xl mb-2">Проект 3</h3>
-            <p class="text-gray-400 text-sm">Описание дизайна.</p>
+            <h3 class="font-semibold text-xl mb-2 fade-in" style="animation-delay:0.3s">Проект 3</h3>
+            <p class="text-gray-400 text-sm fade-in" style="animation-delay:0.5s">Описание дизайна.</p>
           </div>
         </div>
       </div>
@@ -91,14 +151,14 @@
   <!-- Контакты -->
   <section id="contact" class="max-w-6xl mx-auto py-20 px-6 text-center">
     <div class="card p-10">
-      <h2 class="text-3xl font-bold mb-6">Связаться со мной</h2>
-      <p class="text-lg text-gray-400 mb-4">Напишите мне на email: <span class="text-gray-200 font-semibold">design@example.com</span></p>
+      <h2 class="text-3xl font-bold mb-6 fade-in" style="animation-delay:0.2s">Связаться со мной</h2>
+      <p class="text-lg text-gray-400 mb-4 fade-in" style="animation-delay:0.4s">Напишите мне на email: <span class="text-gray-200 font-semibold">design@example.com</span></p>
       <a href="mailto:design@example.com" class="btn">Отправить письмо</a>
     </div>
   </section>
 
   <!-- Подвал -->
-  <footer class="text-center p-6 mt-10 border-t border-gray-700">
+  <footer class="text-center p-6 mt-10 border-t border-gray-700 fade-in" style="animation-delay:0.3s">
     <p class="text-gray-500">© 2025 Design Studio. Все права защищены.</p>
   </footer>
 </body>
