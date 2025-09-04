@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(circle at top left, #1a1f1c, #0d0f0e);
+    }
+    .card {
+      background: #1e2420;
+      border-radius: 1.5rem;
+      box-shadow: 8px 8px 16px rgba(0,0,0,0.6), -8px -8px 16px rgba(50,60,50,0.2);
+    }
+    .btn {
+      background: #1e2420;
+      color: #e5e7eb;
+      border-radius: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      box-shadow: 6px 6px 12px rgba(0,0,0,0.6), -6px -6px 12px rgba(50,60,50,0.2);
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: #0f1512;
+      color: #10b981; /* тёмно-зеленый акцент */
+    }
+    h1, h2, h3, a {
+      color: #10b981;
+    }
+  </style>
+</head>
+<body class="text-gray-200 font-sans">
+  <!-- Шапка -->
+  <header class="p-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Design Studio</h1>
+      <nav class="space-x-6">
+        <a href="index.html#about" class="hover:text-gray-400">Обо мне</a>
+        <a href="portfolio.html" class="hover:text-gray-400 font-semibold">Портфолио</a>
+        <a href="index.html#contact" class="hover:text-gray-400">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Контент страницы Портфолио -->
+  <section class="max-w-6xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Мои работы</h2>
+    <p class="text-lg text-gray-400 text-center mb-12 max-w-3xl mx-auto">
+      Здесь собраны лучшие проекты в сфере веб-дизайна, графики и брендирования.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card overflow-hidden">
+        <img src="https://via.placeholder.com/500x300" alt="Проект 1" class="w-full rounded-t-2xl">
+        <div class="p-5">
+          <h3 class="font-semibold text-xl mb-2">Проект 1</h3>
+          <p class="text-gray-400 text-sm">Редизайн сайта для стартапа.</p>
+        </div>
+      </div>
+      <div class="card overflow-hidden">
+        <img src="https://via.placeholder.com/500x300" alt="Проект 2" class="w-full rounded-t-2xl">
+        <div class="p-5">
+          <h3 class="font-semibold text-xl mb-2">Проект 2</h3>
+          <p class="text-gray-400 text-sm">Создание фирменного стиля для компании.</p>
+        </div>
+      </div>
+      <div class="card overflow-hidden">
+        <img src="https://via.placeholder.com/500x300" alt="Проект 3" class="w-full rounded-t-2xl">
+        <div class="p-5">
+          <h3 class="font-semibold text-xl mb-2">Проект 3</h3>
+          <p class="text-gray-400 text-sm">UX/UI-дизайн мобильного приложения.</p>
+        </div>
+      </div>
+      <div class="card overflow-hidden">
+        <img src="https://via.placeholder.com/500x300" alt="Проект 4" class="w-full rounded-t-2xl">
+        <div class="p-5">
+          <h3 class="font-semibold text-xl mb-2">Проект 4</h3>
+          <p class="text-gray-400 text-sm">Анимации и графический дизайн.</p>
+        </div>
+      </div>
+      <div class="card overflow-hidden">
+        <img src="https://via.placeholder.com/500x300" alt="Проект 5" class="w-full rounded-t-2xl">
+        <div class="p-5">
+          <h3 class="font-semibold text-xl mb-2">Проект 5</h3>
+          <p class="text-gray-400 text-sm">Редизайн интернет-магазина.</p>
+        </div>
+      </div>
+      <div class="card overflow-hidden">
+        <img src="https://via.placeholder.com/500x300" alt="Проект 6" class="w-full rounded-t-2xl">
+        <div class="p-5">
+          <h3 class="font-semibold text-xl mb-2">Проект 6</h3>
+          <p class="text-gray-400 text-sm">Иллюстрации для бренда одежды.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="index.html" class="btn">Назад на главную</a>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="text-center p-6 mt-10 border-t border-gray-700">
+    <p class="text-gray-500">© 2025 Design Studio. Все права защищены.</p>
+  </footer>
+</body>
+</html>
