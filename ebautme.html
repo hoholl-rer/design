@@ -1,93 +1,232 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Обо мне | Design Studio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background: #0f1512;
-      color: #e5e7eb;
-      font-family: 'Inter', sans-serif;
-    }
-    h1, h2, h3, a {
-      color: #10b981;
-    }
-    .btn {
-      background: #10b981;
-      color: #0f1512;
-      padding: 0.75rem 1.5rem;
-      border-radius: 1rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-    .btn:hover {
-      background: #059669;
-      transform: scale(1.05);
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s forwards;
-    }
-    .fade-in-delay {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s forwards;
-      animation-delay: 0.5s;
-    }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
+  <head>
+    <meta charset="UTF-8" />
+    <title>Обо мне | Design Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: #0f1512;
+        color: #e5e7eb;
+        font-family: "Inter", sans-serif;
       }
-    }
-  </style>
-</head>
-<body class="text-gray-200">
-
-  <!-- Шапка -->
-  <header class="p-6 fade-in">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Design Studio</h1>
-      <nav class="space-x-6">
-        <a href="index.html" class="hover:text-gray-400">Главная</a>
-        <a href="ebautme.html" class="hover:text-gray-400">Портфолио</a>
-        <a href="about.html" class="font-semibold">Обо мне</a>
-        <a href="index.html#contact" class="hover:text-gray-400">Контакты</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Контент -->
-  <section class="max-w-6xl mx-auto px-6 py-12">
-    <h2 class="text-4xl font-bold mb-6 fade-in">Обо мне</h2>
-    <p class="text-lg text-gray-400 leading-relaxed mb-8 fade-in-delay">
-      Привет! 👋 Я занимаюсь дизайном, создаю стильные и удобные интерфейсы, 
-      работаю с графикой и брендингом. Моей целью является создание проектов, 
-      которые сочетают в себе эстетику и функциональность.
-    </p>
-
-    <div class="grid md:grid-cols-2 gap-8 items-center">
-      <!-- Фото или иллюстрация -->
-      <div class="fade-in">
-        <img src="https://via.placeholder.com/500x400" alt="Моё фото" class="rounded-2xl shadow-lg">
+      h1,
+      h2,
+      h3,
+      a {
+        color: #10b981;
+      }
+      .btn {
+        background: #10b981;
+        color: #0f1512;
+        padding: 0.75rem 1.5rem;
+        border-radius: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+      .btn:hover {
+        background: #059669;
+        transform: scale(1.05);
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+      }
+      .fade-in-delay {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+        animation-delay: 0.5s;
+      }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="text-gray-200">
+    <!-- Шапка -->
+    <header class="p-6 fade-in">
+      <div
+        class="max-w-6xl mx-auto flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold">Design Studio</h1>
+        <nav class="space-x-6">
+          <a href="index.html" class="hover:text-gray-400">Главная</a>
+          <a href="ebautme.html" class="hover:text-gray-400"
+            >Портфолио</a
+          >
+          <a href="about.html" class="font-semibold">Обо мне</a>
+          <a href="index.html#contact" class="hover:text-gray-400"
+            >Контакты</a
+          >
+        </nav>
       </div>
-      
-      <!-- Навыки -->
-      <div class="space-y-4 fade-in-delay">
-        <h3 class="text-2xl font-semibold">Навыки</h3>
-        <ul class="list-disc list-inside text-gray-400 space-y-2">
-          <li>Графический дизайн</li>
-          <li>Веб-дизайн (UI/UX)</li>
-          <li>Брендинг и айдентика</li>
-          <li>Работа с Photoshop, Figma</li>
-        </ul>
-        <a href="portfolio.html" class="btn mt-4">Смотреть работы</a>
-      </div>
-    </div>
-  </section>
+    </header>
 
-</body>
+    <!-- Обо мне -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="text-4xl font-bold mb-6 fade-in">Обо мне</h2>
+      <p
+        class="text-lg text-gray-400 leading-relaxed mb-8 fade-in-delay"
+      >
+        Привет! 👋 Меня зовут Николай, я дизайнер, который
+        вдохновляется минимализмом и современными трендами. Для меня
+        важно, чтобы каждый проект отражал характер бренда и был
+        удобен для пользователя. Я работаю с клиентами по всему миру:
+        от небольших стартапов до крупных компаний.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="fade-in">
+          <img
+            src="https://picsum.photos/550/400?random=10"
+            alt="Моё фото"
+            class="rounded-2xl shadow-lg"
+          />
+        </div>
+        <div class="space-y-4 fade-in-delay">
+          <h3 class="text-2xl font-semibold">Основные навыки</h3>
+          <ul class="list-disc list-inside text-gray-400 space-y-2">
+            <li>Веб-дизайн (UI/UX, адаптивные макеты)</li>
+            <li>Брендинг и айдентика</li>
+            <li>Работа с Photoshop, Illustrator, Figma</li>
+            <li>Создание анимаций и прототипов</li>
+          </ul>
+          <a href="portfolio.html" class="btn mt-4"
+            >Смотреть работы</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Опыт -->
+    <section class="bg-[#141c18] py-16 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6 text-center">Мой опыт</h2>
+        <p class="text-gray-400 text-center max-w-3xl mx-auto mb-10">
+          За последние 5 лет я реализовал более 50 проектов в сфере
+          графического и веб-дизайна. Работал как с локальными
+          компаниями, так и с международными брендами. Каждый новый
+          проект — это возможность создавать уникальный визуальный
+          язык.
+        </p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 bg-[#1e2420] rounded-xl shadow-md fade-in">
+            <h3 class="text-xl font-semibold mb-2">50+ проектов</h3>
+            <p class="text-gray-400">
+              От лендингов до комплексных сайтов.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-[#1e2420] rounded-xl shadow-md fade-in-delay"
+          >
+            <h3 class="text-xl font-semibold mb-2">10+ брендов</h3>
+            <p class="text-gray-400">
+              Создание айдентики и логотипов.
+            </p>
+          </div>
+          <div class="p-6 bg-[#1e2420] rounded-xl shadow-md fade-in">
+            <h3 class="text-xl font-semibold mb-2">
+              Международный опыт
+            </h3>
+            <p class="text-gray-400">
+              Клиенты из Европы, США и Азии.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Процесс работы -->
+    <section class="max-w-6xl mx-auto py-16 px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        Как я работаю
+      </h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="fade-in">
+          <img
+            src="https://picsum.photos/550/400?random=11"
+            alt="Работа"
+            class="rounded-xl shadow-lg"
+          />
+        </div>
+        <div class="fade-in-delay space-y-4">
+          <p class="text-gray-400">
+            Мой процесс всегда начинается с анализа задач и понимания
+            целей клиента. Я ценю диалог и совместное участие в
+            разработке идей.
+          </p>
+          <ol
+            class="list-decimal list-inside text-gray-400 space-y-2"
+          >
+            <li>Обсуждение и анализ задач</li>
+            <li>Создание прототипа и референсов</li>
+            <li>Дизайн макета и согласование</li>
+            <li>Внесение правок и финальная версия</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="bg-[#141c18] py-16 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Отзывы клиентов</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-6 bg-[#1e2420] rounded-xl shadow-md fade-in">
+            <p class="text-gray-300 italic">
+              “Отличный дизайнер! Проект был выполнен в срок,
+              результат превзошел ожидания.”
+            </p>
+            <span class="block mt-4 text-gray-500"
+              >— Анна, стартап “GreenFood”</span
+            >
+          </div>
+          <div
+            class="p-6 bg-[#1e2420] rounded-xl shadow-md fade-in-delay"
+          >
+            <p class="text-gray-300 italic">
+              “Очень креативный подход. Наш сайт стал гораздо удобнее
+              и современнее.”
+            </p>
+            <span class="block mt-4 text-gray-500"
+              >— Марк, компания “TechVision”</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Хобби -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="text-3xl font-bold mb-6 fade-in">Мои интересы</h2>
+      <p class="text-gray-400 mb-6 fade-in-delay">
+        В свободное время я люблю путешествовать ✈️, фотографировать
+        📷 и изучать новые инструменты дизайна. Эти увлечения помогают
+        мне вдохновляться и приносить свежие идеи в проекты.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <img
+          src="https://picsum.photos/300/200?random=12"
+          class="rounded-lg shadow-md fade-in"
+          alt="Хобби 1"
+        />
+        <img
+          src="https://picsum.photos/300/200?random=13"
+          class="rounded-lg shadow-md fade-in-delay"
+          alt="Хобби 2"
+        />
+        <img
+          src="https://picsum.photos/300/200?random=14"
+          class="rounded-lg shadow-md fade-in"
+          alt="Хобби 3"
+        />
+      </div>
+    </section>
+  </body>
 </html>
